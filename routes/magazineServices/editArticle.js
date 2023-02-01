@@ -4,7 +4,7 @@ require("dotenv").config();
 
 const Magazine = require("../../models/Magazine");
 
-router.get("/edit", async (req, res) => {
+router.post("/edit", async (req, res) => {
   const { _id } = req.body;
 
   const article = await Magazine.findOne({
@@ -29,6 +29,7 @@ router.get("/edit", async (req, res) => {
           sub_title: req.body.sub_title,
           title: req.body.title,
           content: req.body.content,
+          editedBy: req.body.editedBy,
         },
       }
     );

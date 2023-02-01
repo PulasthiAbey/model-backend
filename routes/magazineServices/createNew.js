@@ -8,9 +8,10 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
+    console.log(req.body);
   const productNew = new Magazine({
     title: req.body.title,
-    userName: req.user.userName,
+    userName: req.body.userName,
     sub_title: req.body.sub_title,
     content: req.body.content,
   });

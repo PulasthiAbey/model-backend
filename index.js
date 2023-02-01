@@ -34,8 +34,8 @@ mongoose
 const registerRoute = require("./routes/userServices/signup");
 const loginRoute = require("./routes/userServices/login");
 const newArticleRoute = require("./routes/magazineServices/createNew");
-const viewArticleRoute = require("./routes/magazineServices/createNew");
-const editArticleRoute = require("./routes/magazineServices/createNew");
+const viewArticleRoute = require("./routes/magazineServices/viewArticle");
+const editArticleRoute = require("./routes/magazineServices/editArticle");
 
 app.get("/", (req, res) => {
   console.log("home");

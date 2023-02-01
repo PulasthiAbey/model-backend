@@ -18,6 +18,10 @@ const magazineSchema = mongoose.Schema(
       type: "string",
       required: true,
     },
+    editedBy: {
+      type: "string",
+      required: false,
+    },
   },
   { collection: "Magazine" }
 );
