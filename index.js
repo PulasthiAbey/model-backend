@@ -33,6 +33,9 @@ mongoose
 
 const registerRoute = require("./routes/userServices/signup");
 const loginRoute = require("./routes/userServices/login");
+const newArticleRoute = require("./routes/magazineServices/createNew");
+const viewArticleRoute = require("./routes/magazineServices/createNew");
+const editArticleRoute = require("./routes/magazineServices/createNew");
 
 app.get("/", (req, res) => {
   console.log("home");
@@ -41,6 +44,9 @@ app.get("/", (req, res) => {
 
 app.use("/api/v1/register", registerRoute);
 app.use("/api/v1/login", loginRoute);
+app.use("/api/v1/article", newArticleRoute);
+app.use("/api/v1/article", viewArticleRoute);
+app.use("/api/v1/article", editArticleRoute);
 
 //listening from the server_error
 app.listen(PORT, () => {
