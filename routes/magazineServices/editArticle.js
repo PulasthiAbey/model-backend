@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 require("dotenv").config();
 
-const Magazine = require("../models/Magazine");
+const Magazine = require("../../models/Magazine");
 
 router.get("/edit", async (req, res) => {
   const { _id } = req.body;

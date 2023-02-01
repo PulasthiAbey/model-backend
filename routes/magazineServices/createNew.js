@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const Magazine = require("../models/Magazine");
+const Magazine = require("../../models/Magazine");
 
 router.get("/", async (req, res) => {
   res.status(200).json({ message: "this is the create new article route" });
